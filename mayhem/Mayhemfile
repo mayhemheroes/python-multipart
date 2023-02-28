@@ -1,0 +1,9 @@
+project: python-multipart
+target: parse-request-fuzz
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_request_parser.py
+    libfuzzer: true
+    timeout: 10
